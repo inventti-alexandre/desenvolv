@@ -91,5 +91,8 @@
     <Folder Include="Telas\ModuloDeJogadores\" />
     <Folder Include="Telas\ModuloDeTime\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\Script.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

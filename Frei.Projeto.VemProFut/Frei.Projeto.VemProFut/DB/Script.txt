@@ -1,0 +1,67 @@
+﻿DROP DATABASE IF EXISTS `futebol`;
+CREATE DATABASE `futebol`;
+USE `futebol` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_clubes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `futebol`.`tb_clubes` (
+  `id_clubes` INT NOT NULL AUTO_INCREMENT,
+  `nm_nome` VARCHAR(100) NOT NULL,
+  `nm_nome_mascara` VARCHAR(100) NULL,
+  `sg_sigla` VARCHAR(10) NULL,
+  `lg_logo` LONGBLOB NOT NULL,
+  `ps_pais` VARCHAR(100) NOT NULL,
+  `et_estado` VARCHAR(120) NOT NULL,
+  `cd_cidade` VARCHAR(120) NOT NULL,
+  `br_bairro` VARCHAR(70) NOT NULL,
+  `ra_rua` VARCHAR(120) NOT NULL,
+  `nr_numero` VARCHAR(100) NOT NULL,
+  `cp_cep` VARCHAR(16) NOT NULL,
+  `cp_complemento_endereco` VARCHAR(150) NULL,
+  `nm_estadio` VARCHAR(80) NULL,
+  `cn_cnpj` VARCHAR(20) NOT NULL,
+  `so_site_oficial` VARCHAR(120) NULL,
+  `em_email` VARCHAR(70) NOT NULL,
+  `tf_telefone_fixo` VARCHAR(16) NOT NULL,
+  `tl_celular` VARCHAR(16) NOT NULL,
+  `ac_ano_cliacao` DATE NOT NULL,
+  `dt_data_cadastro` DATE NOT NULL,
+  `fd_fundadores` VARCHAR(100) NOT NULL,
+  `obs_onservacoes` VARCHAR(150) NULL,
+  PRIMARY KEY (`id_clubes`));
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_jogador`
+-- -----------------------------------------------------
+CREATE TABLE `tb_jogador` (
+  `id_jogador` INT NOT NULL AUTO_INCREMENT,
+  `nm_nome` VARCHAR(60) NOT NULL,
+  `dd_idade` INT NOT NULL,
+  `nc_nacionalidade` VARCHAR(70) NOT NULL,
+  `ft_foto` LONGBLOB NOT NULL,
+  `cr_cor` VARCHAR(20) NOT NULL,
+  `nr_numero_camisa` INT NOT NULL,
+  `ps_posicao` VARCHAR(30) NOT NULL,
+  `ps_peso` DECIMAL(10,2) NOT NULL,
+  `at_altura` DECIMAL(10,2) NOT NULL,
+  `ps_pais` VARCHAR(100) NOT NULL,
+  `et_estado` VARCHAR(100) NOT NULL,
+  `br_bairro` VARCHAR(70) NOT NULL,
+  `ra_rua` VARCHAR(70) NOT NULL,
+  `nr_cumero_casa` VARCHAR(100) NOT NULL,
+  `cp_cep` VARCHAR(16) NOT NULL,
+  `cp_complemento_endereco` VARCHAR(150) NULL,
+  `tl_telefone_fixo` VARCHAR(16) NOT NULL,
+  `tl_celular` VARCHAR(16) NOT NULL,
+  `em_email` VARCHAR(60) NOT NULL,
+  `rg` VARCHAR(13) NOT NULL,
+  `cpf` VARCHAR(16) NOT NULL,
+  `dt_data_nascimento` DATE NOT NULL,
+  `dt_data_cadastro` DATETIME NOT NULL,
+  `ap_apelido` VARCHAR(50) NULL,
+  `obs_observacoes` VARCHAR(150) NULL,
+  `fk_id_clube` INT NOT NULL,
+  PRIMARY KEY (`id_jogador`),
+  FOREIGN KEY (`fk_id_clube`) REFERENCES `tb_clubes` (`id_clubes`));
