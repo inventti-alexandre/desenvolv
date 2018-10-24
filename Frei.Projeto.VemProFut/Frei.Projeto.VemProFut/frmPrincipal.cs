@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Frei.Projeto.VemProFut.Telas.ModuloDeJogadores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,24 @@ namespace Frei.Projeto.VemProFut
         public frmPrincipal()
         {
             InitializeComponent();
+        }
+
+
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastrarJogador db = new frmCadastrarJogador();
+            db.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
