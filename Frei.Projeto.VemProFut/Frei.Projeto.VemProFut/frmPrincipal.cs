@@ -35,5 +35,11 @@ namespace Frei.Projeto.VemProFut
         {
             this.Close();
         }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarJogadores consultarJogadores = new frmConsultarJogadores();
+            consultarJogadores.Show();
+        }
     }
 }

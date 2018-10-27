@@ -25,13 +25,13 @@ namespace Frei.Projeto.VemProFut.DB.Jogadores
             db.Remover(ID);
         }
 
-        public List<JogadoresDTO> Listar()
+        public List<JogadoresViewDTO> Listar()
         {
             JogadoresDatabase db = new JogadoresDatabase();
             return db.Listar();
         }
 
-        public List<JogadoresDTO> ConsultarporNome(string nome)
+        public List<JogadoresViewDTO> ConsultarporNome(string nome)
         {
             JogadoresDatabase db = new JogadoresDatabase();
             return db.ConsultarporNome(nome);

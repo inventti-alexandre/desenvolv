@@ -130,7 +130,7 @@ namespace Frei.Projeto.VemProFut.DB.Jogadores
                                                         dt_data_cadastro=@dt_data_cadastro,
                                                         ap_apelido=@ap_apelido,
                                                         obs_observacoes=@obs_observacoes,
-                                                        fk_id_clube=@fk_id_clube,
+                                                        fk_id_clube=@fk_id_clube
                                       where             id_jogador=@id_jogador";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -177,16 +177,16 @@ namespace Frei.Projeto.VemProFut.DB.Jogadores
             db.ExecuteInsertScript(script, parms);
         }
 
-        public List<JogadoresDTO> Listar()
+        public List<JogadoresViewDTO> Listar()
         {
             string script = @"select * from tb_jogador";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-            List<JogadoresDTO> lista = new List<JogadoresDTO>();
+            List<JogadoresViewDTO> lista = new List<JogadoresViewDTO>();
             while(reader.Read())
             {
-                JogadoresDTO dto = new JogadoresDTO();
+                JogadoresViewDTO dto = new JogadoresViewDTO();
                 dto.Idjogador= reader.GetInt32("id_jogador");
                 dto.Nome = reader.GetString("nm_nome");
                 dto.Idade = reader.GetInt32("dd_idade");
@@ -214,24 +214,25 @@ namespace Frei.Projeto.VemProFut.DB.Jogadores
                 dto.DataCadastro= reader.GetDateTime("dt_data_cadastro");
                 dto.Apelido = reader.GetString("ap_apelido");
                 dto.Observacoes= reader.GetString("obs_observacoes");
-                dto.FKClube = reader.GetInt32("fk_id_clube");
+                dto.IDClube = reader.GetInt32("id_clubes");
+                dto.NomeClube = reader.GetString("nm_nomeclube");
 
                 lista.Add(dto);
             }
             return lista;
         }
 
-        public List<JogadoresDTO> ConsultarporNome(string Nome)
+        public List<JogadoresViewDTO> ConsultarporNome(string Nome)
         {
-            string script = @"select * from tb_jogador where nm_nome like @nm_nome";
+            string script = @"select * from Consultar_jogador_e_Clube where nm_nome like @nm_nome";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_nome", Nome + "%"));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-            List<JogadoresDTO> lista = new List<JogadoresDTO>();
+            List<JogadoresViewDTO> lista = new List<JogadoresViewDTO>();
             while (reader.Read())
             {
-                JogadoresDTO dto = new JogadoresDTO();
+                JogadoresViewDTO dto = new JogadoresViewDTO();
                 dto.Idjogador = reader.GetInt32("id_jogador");
                 dto.Nome = reader.GetString("nm_nome");
                 dto.Idade = reader.GetInt32("dd_idade");
@@ -259,7 +260,8 @@ namespace Frei.Projeto.VemProFut.DB.Jogadores
                 dto.DataCadastro = reader.GetDateTime("dt_data_cadastro");
                 dto.Apelido = reader.GetString("ap_apelido");
                 dto.Observacoes = reader.GetString("obs_observacoes");
-                dto.FKClube = reader.GetInt32("fk_id_clube");
+                dto.IDClube = reader.GetInt32("id_clubes");
+                dto.NomeClube=reader.GetString("nm_nomeclube");
 
                 lista.Add(dto);
             }

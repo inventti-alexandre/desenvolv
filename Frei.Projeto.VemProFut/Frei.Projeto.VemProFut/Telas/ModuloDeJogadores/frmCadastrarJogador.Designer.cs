@@ -182,7 +182,7 @@
             // 
             // txtcor
             // 
-            this.txtcor.Location = new System.Drawing.Point(60, 203);
+            this.txtcor.Location = new System.Drawing.Point(69, 200);
             this.txtcor.MaxLength = 20;
             this.txtcor.Name = "txtcor";
             this.txtcor.Size = new System.Drawing.Size(140, 20);
@@ -265,9 +265,9 @@
             this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.Location = new System.Drawing.Point(4, 200);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 20);
+            this.label9.Size = new System.Drawing.Size(55, 20);
             this.label9.TabIndex = 83;
-            this.label9.Text = "Cor";
+            this.label9.Text = "Etnia";
             // 
             // label8
             // 
@@ -620,6 +620,7 @@
             this.pbfotojogador.Location = new System.Drawing.Point(323, 218);
             this.pbfotojogador.Name = "pbfotojogador";
             this.pbfotojogador.Size = new System.Drawing.Size(141, 166);
+            this.pbfotojogador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbfotojogador.TabIndex = 134;
             this.pbfotojogador.TabStop = false;
             // 
@@ -734,6 +735,7 @@
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastrarJogador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastrarJogador";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

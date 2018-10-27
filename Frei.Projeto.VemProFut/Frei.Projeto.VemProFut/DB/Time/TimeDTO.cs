@@ -9,7 +9,7 @@ namespace Frei.Projeto.VemProFut.DB.Time
     class TimeDTO
     {
         public int id_clubes { get; set; }
-        public string nm_nome { get; set; }
+        public string nm_nomeclube { get; set; }
         public string nm_nome_mascara { get; set; }
         public long lg_logo { get; set; }
         public string ps_pais { get; set; }
