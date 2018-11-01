@@ -59,6 +59,7 @@
     <Compile Include="DB\Time\TimeBusiness.cs" />
     <Compile Include="DB\Time\TimeDatabase.cs" />
     <Compile Include="DB\Time\TimeDTO.cs" />
+    <Compile Include="DB\Time\TimeViewDTO.cs" />
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +86,24 @@
     <Compile Include="Telas\ModuloDeJogadores\frmConsultarJogadores.Designer.cs">
       <DependentUpon>frmConsultarJogadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\ModuloDeTime\frmAlterarTimes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\ModuloDeTime\frmAlterarTimes.Designer.cs">
+      <DependentUpon>frmAlterarTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\ModuloDeTime\frmCadastrarTimes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\ModuloDeTime\frmCadastrarTimes.Designer.cs">
+      <DependentUpon>frmCadastrarTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\ModuloDeTime\frmConsultarTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\ModuloDeTime\frmConsultarTime.Designer.cs">
+      <DependentUpon>frmConsultarTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilitarios\APICorreios.cs" />
     <Compile Include="Utilitarios\CorreiosDTO.cs" />
     <Compile Include="Utilitarios\ImagenPlugin\ImagemPlugin.cs" />
@@ -110,6 +129,15 @@
     <EmbeddedResource Include="Telas\ModuloDeJogadores\frmConsultarJogadores.resx">
       <DependentUpon>frmConsultarJogadores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\ModuloDeTime\frmAlterarTimes.resx">
+      <DependentUpon>frmAlterarTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\ModuloDeTime\frmCadastrarTimes.resx">
+      <DependentUpon>frmCadastrarTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\ModuloDeTime\frmConsultarTime.resx">
+      <DependentUpon>frmConsultarTime.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -124,9 +152,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Telas\ModuloDeTime\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DB\Script.txt" />
     <None Include="Resources\alterar.png" />

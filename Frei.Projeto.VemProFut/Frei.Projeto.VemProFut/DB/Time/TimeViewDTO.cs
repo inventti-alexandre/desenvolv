@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Frei.Projeto.VemProFut.DB.Time
 {
-    class TimeDTO
+    class TimeViewDTO
     {
         public int id_clubes { get; set; }
         public string nm_nomeclube { get; set; }
@@ -30,6 +30,5 @@ namespace Frei.Projeto.VemProFut.DB.Time
         public DateTime dt_data_cadastro { get; set; }
         public int fd_fundadores { get; set; }
         public string obs_onservacoes { get; set; }
-       
     }
 }
