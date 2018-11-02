@@ -28,7 +28,7 @@ namespace Frei.Projeto.VemProFut.DB.Time
         public int tl_celular { get; set; }
         public int ac_ano_cliacao { get; set; }
         public DateTime dt_data_cadastro { get; set; }
-        public int fd_fundadores { get; set; }
+        public string fd_fundadores { get; set; }
         public string obs_onservacoes { get; set; }
        
     }

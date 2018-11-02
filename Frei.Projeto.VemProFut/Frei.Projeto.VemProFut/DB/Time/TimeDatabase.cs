@@ -89,7 +89,7 @@ namespace Frei.Projeto.VemProFut.DB.Time
         }
         public void Alterar(TimeDTO dto)
         {
-            string Script = @"UPDATE tb_clubes SET nm_nomeclube
+            string Script = @"UPDATE tb_clubes SET nm_nomeclube = @nm_nomeclube,
                                                      nm_nome_mascara = @nm_nome_mascara,
                                                      sg_sigla = @sg_sigla,
                                                      lg_logo = @lg_logo,

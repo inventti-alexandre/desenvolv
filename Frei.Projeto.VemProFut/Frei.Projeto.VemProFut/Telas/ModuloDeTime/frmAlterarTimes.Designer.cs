@@ -32,7 +32,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
-            this.pbfotojogador = new System.Windows.Forms.PictureBox();
+            this.pbfotoTime = new System.Windows.Forms.PictureBox();
             this.txtcomplemento = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.txtobservacoes = new System.Windows.Forms.TextBox();
@@ -75,7 +75,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbfotojogador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbfotoTime)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +105,7 @@
             this.button2.TabIndex = 203;
             this.button2.Text = "Buscar Logo";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label30
             // 
@@ -117,14 +118,14 @@
             this.label30.TabIndex = 233;
             this.label30.Text = "Logo";
             // 
-            // pbfotojogador
+            // pbfotoTime
             // 
-            this.pbfotojogador.Location = new System.Drawing.Point(387, 92);
-            this.pbfotojogador.Name = "pbfotojogador";
-            this.pbfotojogador.Size = new System.Drawing.Size(141, 166);
-            this.pbfotojogador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbfotojogador.TabIndex = 232;
-            this.pbfotojogador.TabStop = false;
+            this.pbfotoTime.Location = new System.Drawing.Point(387, 92);
+            this.pbfotoTime.Name = "pbfotoTime";
+            this.pbfotoTime.Size = new System.Drawing.Size(141, 166);
+            this.pbfotoTime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbfotoTime.TabIndex = 232;
+            this.pbfotoTime.TabStop = false;
             // 
             // txtcomplemento
             // 
@@ -541,7 +542,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label30);
-            this.Controls.Add(this.pbfotojogador);
+            this.Controls.Add(this.pbfotoTime);
             this.Controls.Add(this.txtcomplemento);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.txtobservacoes);
@@ -582,7 +583,7 @@
             this.Name = "frmAlterarTimes";
             this.Size = new System.Drawing.Size(864, 534);
             this.Load += new System.EventHandler(this.frmAlterarTimes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbfotojogador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbfotoTime)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -596,7 +597,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.PictureBox pbfotojogador;
+        private System.Windows.Forms.PictureBox pbfotoTime;
         private System.Windows.Forms.TextBox txtcomplemento;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox txtobservacoes;
