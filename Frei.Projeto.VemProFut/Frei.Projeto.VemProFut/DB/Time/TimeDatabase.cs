@@ -272,6 +272,10 @@ namespace Frei.Projeto.VemProFut.DB.Time
             }
             return lista;
         }
+        public void Alterar(TimeDTO dto)
+        {
+            string Script = @"tb_clubes SET"
+        }
     }
 }
 

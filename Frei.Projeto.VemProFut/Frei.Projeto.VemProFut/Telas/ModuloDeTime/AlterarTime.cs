@@ -27,6 +27,26 @@ namespace Frei.Projeto.VemProFut.Telas.ModuloDeTime
             TimeViewDTO time = times[0];
 
             txtnome.Text = time.nm_nomeclube;
+            txtidade.Text = time.nm_nome_mascara;
+            txtbairro.Text = time.br_bairro;
+            txtcidade.Text = time.cd_cidade;
+            txtcomplemento.Text = time.cp_complemento_endereco;
+            txtnumerocasa.Text = time.nr_numero;
+            txtobservacoes.Text = time.obs_onservacoes;
+            txtcomplemento.Text = time.cp_complemento_endereco;
+            mktrg.Text = time.cn_cnpj;
+            txtaltura.Text = time.so_site_oficial;
+            mkttelefone.Text = time.tf_telefone_fixo;
+            mktcelular.Text = time.tl_celular;
+            dtpdatacadastro.Text = time;
+            txtposicao.Text = time.fd_fundadores;
+            pbfotoTime.Image = ImagemPlugin.ConverterParaImagem();
+            txtpais.Text = time.ps_pais;
+            mktcep.Text = time.cp_cep;
+            txtrua.Text = time.ra_rua;
+            
+
+
         }
 
         private void btnBuscarLg_Click(object sender, EventArgs e)
@@ -68,7 +88,7 @@ namespace Frei.Projeto.VemProFut.Telas.ModuloDeTime
             dto.cp_cep = Convert.ToInt32(mktcep.Text);
             dto.cn_cnpj = Convert.ToInt32(mktrg.Text);
             dto.cp_complemento_endereco = txtcomplemento.Text;
-            dto.dt_data_cadastro = dtpdatacadastro.Value;
+            dto.dt_data_cadastro = dtpdatacadastro.Text;
             dto.em_email = txtapelido.Text;
             dto.so_site_oficial = txtaltura.Text;
             dto.tf_telefone_fixo = Convert.ToInt32(mkttelefone.Text);
@@ -82,7 +102,7 @@ namespace Frei.Projeto.VemProFut.Telas.ModuloDeTime
             dto.obs_onservacoes = txtobservacoes.Text;
             dto.ps_pais = txtpais.Text;
             dto.ra_rua = txtrua.Text;
-            dto.tf_telefone_fixo = Convert.ToInt32(mkttelefone.Text);
+            dto.tf_telefone_fixo = 
 
             TimeBusiness business = new TimeBusiness();
             business.Alterar(dto);
