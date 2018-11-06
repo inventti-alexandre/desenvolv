@@ -31,16 +31,16 @@ namespace Frei.Projeto.VemProFut.DB.Time
             return db.Listar();
         }
 
-        public List<TimeDatabase> ConsultarporNome(string nome)
+        public List<TimeViewDTO> ConsultarporNome(string nome)
         {
             TimeDatabase db = new TimeDatabase();
             return db.ConsultarPorNome(nome);
         }
 
-        public List<TimeDatabase> ConsultarporId(int ID)
+        public List<TimeViewDTO> ConsultarporId(int ID)
         {
             TimeDatabase db = new TimeDatabase();
-            return db.ConsultarporId(ID);
+            return db.ConsultarPorID(ID);
         }
     }
 }

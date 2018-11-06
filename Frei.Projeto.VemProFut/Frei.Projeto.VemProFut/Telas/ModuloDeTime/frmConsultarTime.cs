@@ -19,29 +19,25 @@ namespace Frei.Projeto.VemProFut.Telas.ModuloDeTime
             TimeBusiness Times = new TimeBusiness();
             List<TimeViewDTO> View = Times.ConsultarporNome(txtnome.Text);
             TimeViewDTO dto = View[0];
-            pbTime.Image = ImagemPlugin.ConverterParaString(dto.lg_logo);
+            pbTime.Image = ImagemPlugin.ConverterParaImagem(dto.lg_logo);
             dgvTime.DataSource = View;
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             CarregardadosTime();
         }
 
         private void dgvTime_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex ==27){
-                frmAlterarTimes AlterarTime = new frmConsultarTime();
+            if(e.ColumnIndex == 6){
+                AlterarTime AlterarTime = new AlterarTime();
                 TimeViewDTO dto = dgvTime.CurrentRow.DataBoundItem as TimeViewDTO;
-                int id_clubes;
-                string nome_clube;
-                id_clubes = dto.id_clubes;
-                AlterarTime.LoadScreen(id_clubes, nome_clube);
+
+                AlterarTime.CarregarCampos(dto.id_clubes.ToString());
                 AlterarTime.Show();
             }
-            if(e.ColumnIndex ==28)
+            if(e.ColumnIndex == 7)
             {
                 TimeBusiness Time = new TimeBusiness();
                 TimeViewDTO dto = dgvTime.CurrentRow.DataBoundItem as TimeViewDTO;

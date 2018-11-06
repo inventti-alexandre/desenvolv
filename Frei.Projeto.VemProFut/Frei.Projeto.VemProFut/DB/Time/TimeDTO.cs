@@ -11,7 +11,7 @@ namespace Frei.Projeto.VemProFut.DB.Time
         public int id_clubes { get; set; }
         public string nm_nomeclube { get; set; }
         public string nm_nome_mascara { get; set; }
-        public long lg_logo { get; set; }
+        public string lg_logo { get; set; }
         public string ps_pais { get; set; }
         public string et_estado { get; set; }
         public string cd_cidade { get; set; }

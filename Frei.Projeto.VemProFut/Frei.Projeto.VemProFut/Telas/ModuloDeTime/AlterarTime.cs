@@ -7,25 +7,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Frei.Projeto.VemProFut.Utilitarios;
 using Frei.Projeto.VemProFut.DB.Time;
+using Frei.Projeto.VemProFut.Utilitarios.ImagenPlugin;
 
 namespace Frei.Projeto.VemProFut.Telas.ModuloDeTime
 {
-    public partial class frmAlterarTimes : UserControl
-    { 
-            int  idclubes;
-            string nomeclube;
-            public frmAlterarTimes()
-            {
-                InitializeComponent();
-            }
-
-            private void frmAlterarTimes_Load(object sender, EventArgs e)
+    public partial class AlterarTime : UserControl
+    {
+        public AlterarTime()
         {
-
+            InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        public void CarregarCampos(string idTime)
+        {
+            TimeBusiness business = new TimeBusiness();
+            List<TimeViewDTO> times = business.ConsultarporId(Convert.ToInt32(idTime));
+            TimeViewDTO time = times[0];
+
+            txtnome.Text = time.nm_nomeclube;
+        }
+
+        private void btnBuscarLg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFile = new OpenFileDialog();
+                DialogResult result = openFile.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    pbfotoTime.ImageLocation = openFile.FileName;
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("ERRO!\n " + erro.Message,
+                                "Back's",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            APICorreios correios = new APICorreios();
+            CorreiosDTO dto = correios.CEPDADOS(mktcep.Text);
+            txtuf.Text = dto.UF;
+            txtcidade.Text = dto.Cidade;
+            txtbairro.Text = dto.Bairro;
+            txtrua.Text = dto.Rua;
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
         {
             TimeDTO dto = new TimeDTO();
             dto.br_bairro = txtbairro.Text;
@@ -51,29 +86,6 @@ namespace Frei.Projeto.VemProFut.Telas.ModuloDeTime
 
             TimeBusiness business = new TimeBusiness();
             business.Alterar(dto);
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                OpenFileDialog openFile = new OpenFileDialog();
-                DialogResult result = openFile.ShowDialog();
-
-                if (result == DialogResult.OK)
-                {
-                    pbfotoTime.ImageLocation = openFile.FileName;
-                }
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("ERRO!\n " + erro.Message,
-                                "Back's",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-            }
         }
     }
 }
