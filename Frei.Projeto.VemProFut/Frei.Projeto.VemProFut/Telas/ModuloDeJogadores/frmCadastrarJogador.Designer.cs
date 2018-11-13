@@ -88,8 +88,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.txtnumerocamisa = new System.Windows.Forms.TextBox();
             this.txtposicao = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbfotojogador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -670,11 +672,23 @@
             this.txtposicao.Size = new System.Drawing.Size(122, 20);
             this.txtposicao.TabIndex = 17;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Frei.Projeto.VemProFut.Properties.Resources.icones_jogo_de_futebol_23_2147508713;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(458, 465);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(97, 67);
+            this.pictureBox1.TabIndex = 283;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmCadastrarJogador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 586);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtposicao);
             this.Controls.Add(this.txtnumerocamisa);
             this.Controls.Add(this.button3);
@@ -740,6 +754,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbfotojogador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -807,5 +822,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtnumerocamisa;
         private System.Windows.Forms.TextBox txtposicao;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

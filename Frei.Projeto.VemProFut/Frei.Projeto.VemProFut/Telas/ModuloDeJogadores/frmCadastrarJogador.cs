@@ -102,6 +102,8 @@ namespace Frei.Projeto.VemProFut.Telas.ModuloDeJogadores
 
         private void label16_Click(object sender, EventArgs e)
         {
+            frmPrincipal menu = new frmPrincipal();
+            menu.Show();
             this.Close();
         }
 
@@ -109,6 +111,13 @@ namespace Frei.Projeto.VemProFut.Telas.ModuloDeJogadores
         {
             SalvarDados();
            MessageBox.Show("Dados salvos com sucesso", "Futebol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmPrincipal principal = new frmPrincipal();
+            principal.Show();
+            this.Close();
         }
     }
 }

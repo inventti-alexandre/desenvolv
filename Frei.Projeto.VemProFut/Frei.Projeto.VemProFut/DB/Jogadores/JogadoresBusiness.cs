@@ -28,8 +28,8 @@ namespace Frei.Projeto.VemProFut.DB.Jogadores
             if (dto.Cidade == string.Empty)
                 throw new ArgumentException("Campo Cidade não pode estar vázio.");
 
-            if (dto.Complementoendereco == string.Empty)
-                throw new ArgumentException("Campo Complementoendereco não pode estar vázio.");
+            ////if (dto.Complementoendereco == string.Empty)
+            ////    throw new ArgumentException("Campo Complementoendereco não pode estar vázio.");
 
             if (dto.Cor == string.Empty)
                 throw new ArgumentException("Campo Cor não pode estar vázio.");

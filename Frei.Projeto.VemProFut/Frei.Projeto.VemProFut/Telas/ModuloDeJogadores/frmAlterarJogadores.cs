@@ -102,7 +102,10 @@ namespace Frei.Projeto.VemProFut.Telas.ModuloDeJogadores
 
         private void label16_Click(object sender, EventArgs e)
         {
+            frmPrincipal menu = new frmPrincipal();
+            menu.Show();
             this.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)

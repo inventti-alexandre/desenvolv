@@ -169,24 +169,24 @@ namespace Frei.Projeto.VemProFut.DB.Time
                 dto.ac_ano_cliacao = reader.GetInt32("ac_ano_cliacao");
                 dto.br_bairro = reader.GetString("br_bairro");
                 dto.cd_cidade = reader.GetString("cd_cidade");
-                dto.cn_cnpj = reader.GetInt32("cn_cnpj");
-                dto.cp_cep = reader.GetInt32("cp_cep");
+                dto.cn_cnpj = reader.GetString("cn_cnpj");
+                dto.cp_cep = reader.GetString("cp_cep");
                 dto.cp_complemento_endereco = reader.GetString("cp_complemento_endereco");
                 dto.dt_data_cadastro = reader.GetDateTime("dt_data_cadastro");
                 dto.em_email = reader.GetString("em_email");
                 dto.et_estado = reader.GetString("et_estado");
-                dto.fd_fundadores = reader.GetInt32("fd_fundadores");
+                dto.fd_fundadores = reader.GetString("fd_fundadores");
                 dto.lg_logo = reader.GetString("lg_logo");
                 dto.nm_estadio = reader.GetString("nm_estadio");
                 dto.nm_nomeclube = reader.GetString("nm_nomeclube");
                 dto.nm_nome_mascara = reader.GetString("nm_nome_mascara");
-                dto.nr_numero = reader.GetInt32("nr_numero");
+                dto.nr_numero = reader.GetString("nr_numero");
                 dto.obs_onservacoes = reader.GetString("obs_onservacoes");
                 dto.ps_pais = reader.GetString("ps_pais");
                 dto.ra_rua = reader.GetString("ra_rua");
                 dto.so_site_oficial = reader.GetString("so_site_oficial");
-                dto.tf_telefone_fixo = reader.GetInt32("tf_telefone_fixo");
-                dto.tl_celular = reader.GetInt32("tl_celular");
+                dto.tf_telefone_fixo = reader.GetString("tf_telefone_fixo");
+                dto.tl_celular = reader.GetString("tl_celular");
 
                 lista.Add(dto);
             }
@@ -209,24 +209,24 @@ namespace Frei.Projeto.VemProFut.DB.Time
                 dto.ac_ano_cliacao = reader.GetInt32("ac_ano_cliacao");
                 dto.br_bairro = reader.GetString("br_bairro");
                 dto.cd_cidade = reader.GetString("cd_cidade");
-                dto.cn_cnpj = reader.GetInt32("cn_cnpj");
-                dto.cp_cep = reader.GetInt32("cp_cep");
+                dto.cn_cnpj = reader.GetString("cn_cnpj");
+                dto.cp_cep = reader.GetString("cp_cep");
                 dto.cp_complemento_endereco = reader.GetString("cp_complemento_endereco");
                 dto.dt_data_cadastro = reader.GetDateTime("dt_data_cadastro");
                 dto.em_email = reader.GetString("em_email");
                 dto.et_estado = reader.GetString("et_estado");
-                dto.fd_fundadores = reader.GetInt32("fd_fundadores");
+                dto.fd_fundadores = reader.GetString("fd_fundadores");
                 dto.lg_logo = reader.GetString("lg_logo");
                 dto.nm_estadio = reader.GetString("nm_estadio");
                 dto.nm_nomeclube = reader.GetString("nm_nomeclube");
                 dto.nm_nome_mascara = reader.GetString("nm_nome_mascara");
-                dto.nr_numero = reader.GetInt32("nr_numero");
+                dto.nr_numero = reader.GetString("nr_numero");
                 dto.obs_onservacoes = reader.GetString("obs_onservacoes");
                 dto.ps_pais = reader.GetString("ps_pais");
                 dto.ra_rua = reader.GetString("ra_rua");
                 dto.so_site_oficial = reader.GetString("so_site_oficial");
-                dto.tf_telefone_fixo = reader.GetInt32("tf_telefone_fixo");
-                dto.tl_celular = reader.GetInt32("tl_celular");
+                dto.tf_telefone_fixo = reader.GetString("tf_telefone_fixo");
+                dto.tl_celular = reader.GetString("tl_celular");
 
                 lista.Add(dto);
             }
@@ -249,33 +249,33 @@ namespace Frei.Projeto.VemProFut.DB.Time
                 dto.ac_ano_cliacao = reader.GetInt32("ac_ano_cliacao");
                 dto.br_bairro = reader.GetString("br_bairro");
                 dto.cd_cidade = reader.GetString("cd_cidade");
-                dto.cn_cnpj = reader.GetInt32("cn_cnpj");
-                dto.cp_cep = reader.GetInt32("cp_cep");
+                dto.cn_cnpj = reader.GetString("cn_cnpj");
+                dto.cp_cep = reader.GetString("cp_cep");
                 dto.cp_complemento_endereco = reader.GetString("cp_complemento_endereco");
                 dto.dt_data_cadastro = reader.GetDateTime("dt_data_cadastro");
                 dto.em_email = reader.GetString("em_email");
                 dto.et_estado = reader.GetString("et_estado");
-                dto.fd_fundadores = reader.GetInt32("fd_fundadores");
+                dto.fd_fundadores = reader.GetString("fd_fundadores");
                 dto.lg_logo = reader.GetString("lg_logo");
                 dto.nm_estadio = reader.GetString("nm_estadio");
                 dto.nm_nomeclube = reader.GetString("nm_nomeclube");
                 dto.nm_nome_mascara = reader.GetString("nm_nome_mascara");
-                dto.nr_numero = reader.GetInt32("nr_numero");
+                dto.nr_numero = reader.GetString("nr_numero");
                 dto.obs_onservacoes = reader.GetString("obs_onservacoes");
                 dto.ps_pais = reader.GetString("ps_pais");
                 dto.ra_rua = reader.GetString("ra_rua");
                 dto.so_site_oficial = reader.GetString("so_site_oficial");
-                dto.tf_telefone_fixo = reader.GetInt32("tf_telefone_fixo");
-                dto.tl_celular = reader.GetInt32("tl_celular");
+                dto.tf_telefone_fixo = reader.GetString("tf_telefone_fixo");
+                dto.tl_celular = reader.GetString("tl_celular");
 
                 lista.Add(dto);
             }
             return lista;
         }
-        public void Alterar(TimeDTO dto)
-        {
-            string Script = @"tb_clubes SET"
-        }
+        
+        
+            
+        
     }
 }
 

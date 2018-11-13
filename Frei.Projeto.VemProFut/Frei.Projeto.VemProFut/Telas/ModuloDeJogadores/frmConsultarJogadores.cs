@@ -40,6 +40,8 @@ namespace Frei.Projeto.VemProFut.Telas.ModuloDeJogadores
 
         private void label16_Click(object sender, EventArgs e)
         {
+            frmPrincipal menu = new frmPrincipal();
+            menu.Show();
             this.Close();
         }
 
@@ -56,6 +58,7 @@ namespace Frei.Projeto.VemProFut.Telas.ModuloDeJogadores
                 nomeclube = dto.NomeClube;
                 alterarJogadores.LoadScreen(idjogador, idclube, nomeclube);
                 alterarJogadores.Show();
+                this.Close();
             }
 
             if(e.ColumnIndex == 28)

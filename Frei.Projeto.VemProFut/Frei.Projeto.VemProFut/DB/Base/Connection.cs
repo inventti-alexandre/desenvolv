@@ -12,7 +12,7 @@ namespace Frei.Projeto.VemProFut.DB.Base
         public MySqlConnection Create()
         {
             //string connectionString = "server=localhost;database=futebol;uid=root;password=1234;sslmode=none";
-            string connectionString = "server=104.214.59.125;database=futebol;uid=nsf;password=nsf@2018;sslmode=none";
+            string connectionString = "server=70.37.57.127;database=futebol;uid=nsf;password=nsf@2018;sslmode=none";
 
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();

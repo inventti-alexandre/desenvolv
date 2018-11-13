@@ -29,6 +29,7 @@ namespace Frei.Projeto.VemProFut
         {
             frmCadastrarJogador db = new frmCadastrarJogador();
             db.Show();
+            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,18 +41,17 @@ namespace Frei.Projeto.VemProFut
         {
             frmConsultarJogadores consultarJogadores = new frmConsultarJogadores();
             consultarJogadores.Show();
+            this.Hide();
         }
 
         private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Telas.ModuloDeTime.frmCadastrarTimes frm = new Telas.ModuloDeTime.frmCadastrarTimes();
-            frm.Show();
+           
         }
 
         private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Telas.ModuloDeTime.frmConsultarTime frm = new Telas.ModuloDeTime.frmConsultarTime();
-            frm.Show();
+           
         }
     }
 }

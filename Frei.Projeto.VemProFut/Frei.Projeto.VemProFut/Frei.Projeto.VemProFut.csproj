@@ -68,6 +68,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas\ModeloDeClubes\FrmAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\ModeloDeClubes\FrmAlterar.Designer.cs">
+      <DependentUpon>FrmAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\ModeloDeClubes\FrmCadastrarClubes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\ModeloDeClubes\FrmCadastrarClubes.Designer.cs">
+      <DependentUpon>FrmCadastrarClubes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\ModeloDeClubes\FrmConsultarClubes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\ModeloDeClubes\FrmConsultarClubes.Designer.cs">
+      <DependentUpon>FrmConsultarClubes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\ModuloDeJogadores\frmAlterarJogadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,24 +104,6 @@
     <Compile Include="Telas\ModuloDeJogadores\frmConsultarJogadores.Designer.cs">
       <DependentUpon>frmConsultarJogadores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\ModuloDeTime\AlterarTime.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Telas\ModuloDeTime\AlterarTime.Designer.cs">
-      <DependentUpon>AlterarTime.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\ModuloDeTime\frmCadastrarTimes.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Telas\ModuloDeTime\frmCadastrarTimes.Designer.cs">
-      <DependentUpon>frmCadastrarTimes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\ModuloDeTime\frmConsultarTime.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Telas\ModuloDeTime\frmConsultarTime.Designer.cs">
-      <DependentUpon>frmConsultarTime.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utilitarios\APICorreios.cs" />
     <Compile Include="Utilitarios\CorreiosDTO.cs" />
     <Compile Include="Utilitarios\ImagenPlugin\ImagemPlugin.cs" />
@@ -120,6 +120,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Telas\ModeloDeClubes\FrmAlterar.resx">
+      <DependentUpon>FrmAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\ModeloDeClubes\FrmCadastrarClubes.resx">
+      <DependentUpon>FrmCadastrarClubes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\ModeloDeClubes\FrmConsultarClubes.resx">
+      <DependentUpon>FrmConsultarClubes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\ModuloDeJogadores\frmAlterarJogadores.resx">
       <DependentUpon>frmAlterarJogadores.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,15 +137,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\ModuloDeJogadores\frmConsultarJogadores.resx">
       <DependentUpon>frmConsultarJogadores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\ModuloDeTime\AlterarTime.resx">
-      <DependentUpon>AlterarTime.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\ModuloDeTime\frmCadastrarTimes.resx">
-      <DependentUpon>frmCadastrarTimes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\ModuloDeTime\frmConsultarTime.resx">
-      <DependentUpon>frmConsultarTime.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -155,6 +155,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="DB\Script.txt" />
+    <None Include="Resources\icones-jogo-de-futebol_23-2147508713.jpg" />
     <None Include="Resources\alterar.png" />
     <None Include="Resources\transferir.jpg" />
   </ItemGroup>
