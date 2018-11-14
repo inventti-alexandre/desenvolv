@@ -1,4 +1,5 @@
-﻿using Frei.Projeto.VemProFut.Telas.ModuloDeJogadores;
+﻿using Frei.Projeto.VemProFut.Telas.ModeloDeClubes;
+using Frei.Projeto.VemProFut.Telas.ModuloDeJogadores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,12 +47,16 @@ namespace Frei.Projeto.VemProFut
 
         private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-           
+            FrmCadastrarClubes cadastrarClube = new FrmCadastrarClubes();
+            cadastrarClube.Show();
+            this.Hide();
         }
 
         private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-           
+            FrmAlterar cadastrarClube = new FrmAlterar();
+            cadastrarClube.Show();
+            this.Hide();
         }
     }
 }

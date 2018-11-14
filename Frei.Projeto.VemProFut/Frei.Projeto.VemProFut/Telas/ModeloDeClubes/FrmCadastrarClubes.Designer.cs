@@ -192,12 +192,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(743, 131);
+            this.button1.Location = new System.Drawing.Point(806, 119);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 206;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // mktcep
             // 
@@ -391,7 +392,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(859, 25);
+            this.panel1.Size = new System.Drawing.Size(887, 25);
             this.panel1.TabIndex = 225;
             // 
             // txtaltura
@@ -560,7 +561,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 622);
+            this.ClientSize = new System.Drawing.Size(887, 622);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtposicao);
             this.Controls.Add(this.button3);
