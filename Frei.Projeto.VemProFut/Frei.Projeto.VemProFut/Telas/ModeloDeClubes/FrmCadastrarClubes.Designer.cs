@@ -56,7 +56,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.dtpdatacadastro = new System.Windows.Forms.DateTimePicker();
-            this.txtapelido = new System.Windows.Forms.TextBox();
             this.mkttelefone = new System.Windows.Forms.MaskedTextBox();
             this.mktcelular = new System.Windows.Forms.MaskedTextBox();
             this.mktrg = new System.Windows.Forms.MaskedTextBox();
@@ -350,14 +349,6 @@
             this.dtpdatacadastro.Size = new System.Drawing.Size(200, 20);
             this.dtpdatacadastro.TabIndex = 200;
             // 
-            // txtapelido
-            // 
-            this.txtapelido.Location = new System.Drawing.Point(154, 249);
-            this.txtapelido.MaxLength = 50;
-            this.txtapelido.Name = "txtapelido";
-            this.txtapelido.Size = new System.Drawing.Size(203, 20);
-            this.txtapelido.TabIndex = 196;
-            // 
             // mkttelefone
             // 
             this.mkttelefone.Location = new System.Drawing.Point(154, 275);
@@ -376,7 +367,7 @@
             // 
             // mktrg
             // 
-            this.mktrg.Location = new System.Drawing.Point(159, 174);
+            this.mktrg.Location = new System.Drawing.Point(154, 174);
             this.mktrg.Mask = "99.999.999-0";
             this.mktrg.Name = "mktrg";
             this.mktrg.Size = new System.Drawing.Size(100, 20);
@@ -589,7 +580,6 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.dtpdatacadastro);
-            this.Controls.Add(this.txtapelido);
             this.Controls.Add(this.mkttelefone);
             this.Controls.Add(this.mktcelular);
             this.Controls.Add(this.mktrg);
@@ -650,7 +640,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DateTimePicker dtpdatacadastro;
-        private System.Windows.Forms.TextBox txtapelido;
         private System.Windows.Forms.MaskedTextBox mkttelefone;
         private System.Windows.Forms.MaskedTextBox mktcelular;
         private System.Windows.Forms.MaskedTextBox mktrg;

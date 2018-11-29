@@ -87,7 +87,7 @@ namespace Frei.Projeto.VemProFut.Telas.ModuloDeJogadores
             dto.FKClube = 1;
             JogadoresBusiness business = new JogadoresBusiness();
             business.Salvar(dto);
-            //Não esquecer de trocar a chave de clube quando o luiz terminar a parte dele
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
